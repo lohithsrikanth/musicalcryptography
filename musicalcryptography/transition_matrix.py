@@ -108,7 +108,7 @@ for i in range(X_SIZE):
     cols = []
     for j in range(Y_SIZE):
         third_dim = []
-        for k in range(4):
+        for k in range(random.randint(2, 5)):
             if a[i][j] == 1:
                 third_dim.append(tuple_list[count])
                 count += 1
