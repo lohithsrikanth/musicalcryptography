@@ -72,7 +72,7 @@ for word in word_list:
         word1 = word.split(',')
         multi_chromosomes = generate_multi_chromosomes(word1[0])
     elif '.' in word:
-        word1 = word.split(',')
+        word1 = word.split('.')
         multi_chromosomes = generate_multi_chromosomes(word1[0])
     elif '?' in word:
         word1 = word.split('?')
