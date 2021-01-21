@@ -20,11 +20,13 @@ def genetic_algorithm(population, fitness, generate, halt, reverse = True):
     If the halt function returns True for a generation then the algorithm stops.
     """
     current_population = sorted(population, key=fitness, reverse=reverse)
+    current_population = current_population[:100]
     generation_count = 1
     yield current_population
     while not halt(current_population, generation_count):
         new_generation = generate(current_population)
         current_population = sorted(new_generation, key=fitness, reverse=True)
+        current_population = current_population[:100]
         generation_count += 1
         yield current_population
         
