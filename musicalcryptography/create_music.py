@@ -21,7 +21,7 @@ score = Score("Encryption Music", 220.0)
 i = 0
 for i in range(len(playable_notes)):
     if playable_notes[i] == -46:
-        note = Note(REST, duration_list[i])
+        note = Note(abs(playable_notes[i]), duration_list[i], dynamics_list[i])
     elif playable_notes[i] == -44:
         note = Note(abs(playable_notes[i]), duration_list[i], dynamics_list[i])
     elif playable_notes[i] == -33:
