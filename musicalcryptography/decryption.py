@@ -107,11 +107,11 @@ b = 0
 for i in range(26):
     b += a[i].count(0)
     
-print b
+# print b
 
 # random seed value being assigned          
-print
-print "The seed value is: ", seed
+# print
+# print "The seed value is: ", seed
 random.seed(seed)
 
 random.shuffle(tuple_list)
@@ -149,7 +149,7 @@ for i in range(len(chunks)):
     start = True
     for j in range(len(chunks[i])):
         ind = find(chunks[i][j], key)
-        print ind
+        # print ind
     
         if start:
             msg += ' '
@@ -170,5 +170,7 @@ for i in range(len(chunks)):
                 msg += '.'
         else:
             msg += letter_dict[ind[1]]
-            
-print msg
+
+print            
+print "The decrypted message is:" + msg
+print
