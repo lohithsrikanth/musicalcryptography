@@ -112,19 +112,19 @@ for word in word_list:
     if ',' in word:
         playable_notes.append(-44)
         playable_channels.append(9)
-    if '.' in word:
+    elif '.' in word:
         playable_notes.append(-46)
-        playable_channels.append(0)
-    if '!' in word:
+        playable_channels.append(9)
+    elif '!' in word:
         playable_notes.append(-33)
         playable_channels.append(9)
-    if '?' in word:
+    elif '?' in word:
         playable_notes.append(-63)
         playable_channels.append(9)
-    if ';' in word:
+    elif ';' in word:
         playable_notes.append(-59)
         playable_channels.append(9)
-    if ':' in word:
+    elif ':' in word:
         playable_notes.append(-58)
         playable_channels.append(9)
     
@@ -135,7 +135,7 @@ if not check(playable_notes, playable_channels):
     raise Exception("The lengths of lists playable_notes and playable_channels are not equal")
 
 for i in range(len(playable_notes)):
-    duration_list.append(1.5)
+    duration_list.append(2.0)
     dynamics_list.append(85)
 
 def mutate():
